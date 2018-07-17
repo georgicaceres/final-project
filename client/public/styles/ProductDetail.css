@@ -1,0 +1,19 @@
+/*---------------------Container Box---------------------*/
+.detailContainer {width: 83.3%; margin: auto; display: flex; background-color: #fff}
+
+/*---------------------Figure---------------------*/
+.detailImage{width: 65%; margin: 32px; margin-bottom: 0}
+.descriptionTitle{font-size: 28px;margin: 16px 0}
+.descriptionContent{margin: 32px 0; text-align: justify;}
+
+/*---------------------Details---------------------*/
+.details{width: 35%; margin: 32px; margin-left: 0;}
+.condAndSold{font-size: 14px; margin-bottom: 16px}
+.itemTitle{font-size: 24px; margin-bottom: 32px}
+.itemPrice{font-size: 46px; margin-bottom: 32px}
+sup{vertical-align: center; font-size: 0.5em}
+.btn {width: 50%; padding: 15px; overflow: hidden; background-color: #9B3EEA; color: #fff; border-width: 0;
+    outline: none; border-radius: 2px; box-shadow: 0 1px 4px rgba(0, 0, 0, .6)}
+.btn:hover{cursor:pointer}
+
+/*---------------------Container Box---------------------*/

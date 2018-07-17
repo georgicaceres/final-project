@@ -1,0 +1,18 @@
+/*---------------------Header---------------------*/
+header{display: flex; justify-content: center; align-items: center; width: 100%; background-color: #3EEA9B}
+
+/*---------------------Logo---------------------*/
+.logo{width: 10%; margin: 0; display: flex; justify-content: flex-start; align-items: center}
+
+/*---------------------Search-Box---------------------*/
+.searchBox{width: 83.3%; display: flex; align-items: center; height: 50px}
+
+/*---------------------Form---------------------*/
+form {width: 100%; display: flex; align-items: center; border-radius: 4px; overflow: hidden;}
+/*---------------------Input---------------------*/
+.searchInput{box-sizing: border-box; width: 100%; border: none; height: 34px; padding: 6px 6px 6px 35px}
+.searchInput:focus{outline: none}
+
+/*---------------------Button---------------------*/
+.searchButton{height: 34px; width: 5%; box-sizing: border-box; border: none; background-color: #F4B061; padding: 0px;}
+.searchButton:hover{cursor: pointer; outline: none}

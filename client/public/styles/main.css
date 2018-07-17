@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+@import url("Breadcrumbs.css");
+@import url("SearchBar.css");
+@import url("ProductPreview.css");
+@import url("ProductDetail.css");
+@import url("Carrousel.css");
+
+body{margin: 0; margin-bottom: 32px;background-color: #EEEEEE; font-family: 'Roboto', sans-serif;}
+
+.loading, .notFound{width: 100%; display: flex; justify-content: center; align-items: center; position:absolute;
+    left:0px; top:50px; right:0px; bottom:0px;
+}

@@ -1,0 +1,6 @@
+.carrousel {display: flex; justify-content: center; position: relative; border: 1px solid #EEEEEE;  user-select: none}
+.carrousel img {margin: 25px}
+.slide-arrow {position: absolute; top: 50%; font-size: 2em; user-select: none;}
+.slide-arrow:hover{cursor: pointer; color: #9B3EEA}
+.slide-arrow.right {right: 0px}
+.slide-arrow.left {left: 0px}
