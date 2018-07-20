@@ -8,6 +8,6 @@
 
 body{margin: 0; margin-bottom: 32px;background-color: #EEEEEE; font-family: 'Roboto', sans-serif;}
 
-.loading, .notFound {width: 100%; display: flex; justify-content: center; align-items: center; position:absolute;
+.loading, .notFound {width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; position:absolute;
     left:0px; top:50px; right:0px; bottom:0px; font-size: 1.2em;text-align: center;
 }
