@@ -38,7 +38,7 @@ class Products extends Component {
                 </li>
             );
         });
-    }
+    };
 
     render() {
         if(!this.props.products.preview) return <div className='loading'><ReactLoading type="spinningBubbles" color="black" /></div>;
@@ -56,6 +56,6 @@ class Products extends Component {
 
 function mapStateToProps(state) {
     return { products: state.products};
-}
+};
 
 export default connect(mapStateToProps, { fetchProducts})(Products);

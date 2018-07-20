@@ -1,5 +1,5 @@
 /*---------------------Header---------------------*/
-header{display: flex; justify-content: center; align-items: center; width: 100%; background-color: #3EEA9B}
+header{display: flex; justify-content: center; align-items: center; width: 100%; background-color: #DAF7A6}
 
 /*---------------------Logo---------------------*/
 .logo{width: 10%; margin: 0; display: flex; justify-content: flex-start; align-items: center}
@@ -14,5 +14,13 @@ form {width: 100%; display: flex; align-items: center; border-radius: 4px; overf
 .searchInput:focus{outline: none}
 
 /*---------------------Button---------------------*/
-.searchButton{height: 34px; width: 5%; box-sizing: border-box; border: none; background-color: #F4B061; padding: 0px;}
+.searchButton{height: 34px; width: 5%; box-sizing: border-box; border: none; background-color: #FFC300; padding: 0px;}
 .searchButton:hover{cursor: pointer; outline: none}
+
+/*---------------------MediaQueries---------------------*/
+@media screen and (min-width:240px) and (max-width:800px) {
+    .searchBox {width: 95%}
+    .logo {margin-right: 5px}
+    .logo img{width: 100%}
+    .searchButton{width: 36px;}
+}

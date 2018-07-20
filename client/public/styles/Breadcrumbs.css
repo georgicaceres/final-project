@@ -1,3 +1,7 @@
 /*---------------------breadcrumbs---------------------*/
 .breadcrumbs {list-style: none; width: 83.3%; display: flex; margin: 16px auto; font-weight: 300; color: #666666}
-.breadcrumbs li {margin-right: 3px}
+
+/*---------------------MediaQueries---------------------*/
+@media screen and (min-width:240px) and (max-width:800px) {
+	.breadcrumbs {display: none}
+}

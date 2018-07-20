@@ -12,8 +12,16 @@
 .itemTitle{font-size: 24px; margin-bottom: 32px}
 .itemPrice{font-size: 46px; margin-bottom: 32px}
 sup{vertical-align: center; font-size: 0.5em}
-.btn {width: 50%; padding: 15px; overflow: hidden; background-color: #9B3EEA; color: #fff; border-width: 0;
+.btn {min-width: 50%; padding: 15px; font-size: 1.2em; overflow: hidden; background-color: #FF5733; color: #fff; border-width: 0;
     outline: none; border-radius: 2px; box-shadow: 0 1px 4px rgba(0, 0, 0, .6)}
 .btn:hover{cursor:pointer}
 
-/*---------------------Container Box---------------------*/
+/*---------------------MediaQueries---------------------*/
+@media screen and (min-width:240px) and (max-width:800px) {
+	.detailContainer{width: 100%; flex-direction: column;}
+    .detailImage {width: 100%; height: auto;margin: 0}
+    .descriptionTitle, .descriptionContent {display: none}
+    .details{width: 90%; margin: 32px auto; display: flex; flex-direction: column}
+    .itemTitle{margin: 8px 0 }
+    .btn{width: 90%; margin: auto; align-self: center;}
+}

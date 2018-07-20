@@ -34,6 +34,7 @@ class SearchBar extends Component {
                             placeholder='Buscar...'
                             className='searchInput'
                             value={this.state.term}
+                            onFocus={event => event.target.select()}
                             onChange={this.onInputChange.bind(this)}/>
                         <button type='submit' className='searchButton'>
                             <img src='/images/search.png' alt="ic-search"/>
@@ -47,6 +48,6 @@ class SearchBar extends Component {
 
 function mapStateToProps(state) {
     return { products: state.products};
-}
+};
 
 export default connect(mapStateToProps, { fetchProducts})(SearchBar);
