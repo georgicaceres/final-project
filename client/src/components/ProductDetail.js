@@ -4,6 +4,7 @@ import ReactLoading from "react-loading";
 import { fetchProduct } from '../actions';
 import Breadcrumb from './Breadcrumb';
 import Carrousel from './Carrousel';
+import ErrorScreen from './ErrorScreen';
 
 class ProductDetail extends Component {
     componentDidMount() {
@@ -14,9 +15,9 @@ class ProductDetail extends Component {
     };
 
     render() {
-        const { product } = this.props;
-        if (!product) return <div className='loading'><ReactLoading type="spinningBubbles" color="black" /></div>;
-        if (product.missing) return <div className='notFound'>Lo sentimos, no encontramos ningún producto compatible con la búsqueda. Inténtelo nuevamente! </div>
+        const { product, error} = this.props;
+        if (error) return <ErrorScreen response={error}/>
+        if (!product) return <div className='loading'><ReactLoading type="spinningBubbles" color="#FFC300" /></div>;
         return (
             <div>
                 <Breadcrumb path={product.category}/>
@@ -42,8 +43,8 @@ class ProductDetail extends Component {
     };
 };
 
-function mapStateToProps({products}, ownProps) {
-    return { product: products[ownProps.match.params.id] };
+function mapStateToProps({ products }, ownProps) {
+    return { product: products[ownProps.match.params.id], error: products.error };
 }
 
 export default connect(mapStateToProps, {fetchProduct })(ProductDetail);

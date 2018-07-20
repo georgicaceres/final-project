@@ -1,17 +1,15 @@
-import { FETCH_PRODUCTS, FETCH_PRODUCT, CLEAR_PRODUCTS, ID_NOT_FOUND, NOT_FOUND  }  from '../actions';
+import { FETCH_PRODUCTS, FETCH_PRODUCT, CLEAR_PRODUCTS, ERROR }  from '../actions';
 
 export default function(state = {}, action) {
     switch (action.type) {
     case FETCH_PRODUCT:
-        return { ...state, [action.payload.item.id]: action.payload.item};
+        return { ...state, [action.payload.item.id]: action.payload.item, error: null};
     case CLEAR_PRODUCTS:
-        return { ...state, preview: null, breadcrumb: null};
+        return { ...state, preview: null, breadcrumb: null, error: null};
     case FETCH_PRODUCTS:
-        return { ...state, preview: action.payload.items, breadcrumb: action.payload.categories};
-    case ID_NOT_FOUND:
-        return {...state, [action.id]: {missing: true}};
-    case NOT_FOUND:
-        return {...state, preview: {missing: true}};
+        return { ...state, preview: action.payload.items, breadcrumb: action.payload.categories, error: null};
+    case ERROR:
+        return { ...state, error: action.response};
     default:
         return state;
     }

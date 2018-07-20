@@ -8,7 +8,7 @@ self.getAllItems = function(req, res, next) {
         res.json(items);
     })
     .catch(function(err) {
-        res.status(404).send('Sorry, we cannot find that!');
+        res.status(404).send('Lo sentimos, tu búsqueda no produjo resultados!');
     })
 };
 
@@ -19,7 +19,7 @@ self.getItem = function(req, res, next) {
         res.json(item);
     })
     .catch(function(err) {
-        res.status(404).send('Sorry, we cannot find that!');
+        res.status(404).send('Lo sentimos, no encontramos coincidencias para el id ingresado!');
     })
 };
 

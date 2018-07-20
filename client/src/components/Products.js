@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { fetchProducts } from '../actions';
 import { Link } from 'react-router-dom';
 import Breadcrumb from './Breadcrumb';
+import ErrorScreen from './ErrorScreen';
 
 class Products extends Component {
     componentDidMount() {
@@ -12,8 +13,8 @@ class Products extends Component {
         this.props.fetchProducts(search);
     };
 
-    renderProducts() {
-        return  _.map(this.props.products.preview, product => {
+    renderProducts(arrayOfProducts) {
+        return  _.map(arrayOfProducts, product => {
             return (
                 <li key={product.id}>
                     <Link to={`/items/${product.id}`}  className='previewBox'>
@@ -41,21 +42,22 @@ class Products extends Component {
     };
 
     render() {
-        if(!this.props.products.preview) return <div className='loading'><ReactLoading type="spinningBubbles" color="black" /></div>;
-        if (this.props.products.preview.missing) return <div className='notFound'>Lo siento, no encontramos ningún producto compatible con la búsqueda</div>
+        const { preview, breadcrumb } = this.props.products
+        if (this.props.error) return <ErrorScreen response={this.props.error}/>
+        if(!preview) return <div className='loading'><ReactLoading type="spinningBubbles" color="#FFC300" /></div>;
         return (
             <div>
-                <Breadcrumb path={this.props.products.breadcrumb}/>
+                <Breadcrumb path={breadcrumb}/>
                 <ul className='productList'>
-                    {this.renderProducts()}
+                    {this.renderProducts(preview)}
                 </ul>
             </div>
         );
     };
 };
 
-function mapStateToProps(state) {
-    return { products: state.products};
+function mapStateToProps({products}) {
+    return { products, error: products.error };
 };
 
 export default connect(mapStateToProps, { fetchProducts})(Products);

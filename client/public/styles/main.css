@@ -5,6 +5,7 @@
 @import url("ProductPreview.css");
 @import url("ProductDetail.css");
 @import url("Carrousel.css");
+@import url("ErrorScreen.css");
 
 body{margin: 0; margin-bottom: 32px;background-color: #EEEEEE; font-family: 'Roboto', sans-serif;}
 

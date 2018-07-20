@@ -3,8 +3,7 @@ import axios from 'axios';
 export const FETCH_PRODUCTS = 'fetch_products';
 export const CLEAR_PRODUCTS = 'clear_products';
 export const FETCH_PRODUCT = 'fetch_product';
-export const NOT_FOUND = 'not_found';
-export const ID_NOT_FOUND = 'id_not_found';
+export const ERROR = 'error';
 
 const ROOT_URL = '/api/items';
 
@@ -17,7 +16,7 @@ export function fetchProducts(search_term, callback) {
             dispatch({ type: FETCH_PRODUCTS, payload: data});
         })
         .catch((error) => {
-            dispatch({type: NOT_FOUND, search_term})
+            dispatch({type: ERROR, response: error.response});
         });
     };
 };
@@ -30,8 +29,7 @@ export function fetchProduct(id) {
             dispatch({ type: FETCH_PRODUCT, payload: data});
         })
         .catch((error) => {
-            console.log(error.response.status, "error")
-            dispatch({type: ID_NOT_FOUND, id})
+            dispatch({type: ERROR, response: error.response});
         });
     };
 };

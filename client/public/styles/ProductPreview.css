@@ -1,14 +1,14 @@
 .productList{list-style: none; width: 83.3%; margin: auto; background-color: #fff; padding: 0}
 
 /*---------------------Container Box---------------------*/
-.contentBox{display: flex; padding: 16px 0; text-decoration: none; color: #333333}
+.previewBox{display: flex; padding: 16px 0; text-decoration: none; color: #333333}
 hr {margin: 0 16px; border-top: #EEEEEE}
 li{ color: #EEEEEE; display:block; margin:0;}
-li:after {display:block; content: ''; border-bottom: solid 1px #3EEA9B; transform: scaleX(0); transition: transform 500ms ease-in-out;}
+li:after {display:block; content: ''; border-bottom: solid 1px #F4B061; transform: scaleX(0); transition: transform 500ms ease-in-out;}
 li:hover:after { transform: scaleX(1); }
 /*---------------------Image---------------------*/
-.contentImage{margin: 0 16px}
-.contentImage img{width: 180px; height: 180px; border: 1px solid #EEEEEE; border-radius: 4px}
+.previewImage{margin: 0 16px}
+.previewImage img{width: 180px; height: 180px; border: 1px solid #EEEEEE; border-radius: 4px}
 
 /*---------------------Info---------------------*/
 .productInfo{width: 60%}
@@ -21,7 +21,7 @@ sup{vertical-align: center; font-size: 0.5em}
 /*---------------------MediaQueries---------------------*/
 @media screen and (min-width:240px) and (max-width:800px) {
     .productList{width: 100%}
-    .contentImage img {width: 100%; height: auto}
+    .previewImage img {width: 100%; height: auto}
     .productPrice, .shipping{font-size: 1em; font-weight: bold;}
     .productLocation {display: none}
     .productPrice, .productTitle {margin: 10px 0}
